@@ -82,5 +82,24 @@ public class StudentController {
 			listOfCountries.add(bhutanStudent);
 			return listOfCountries;
 
+
 		}
+		
+		 @RequestMapping(value = "/students", method = RequestMethod.POST)
+			public List<Student> createStudentList() {
+
+				Student indiaStudent = new Student(1, "India");
+				Student chinaStudent = new Student(4, "China");
+				Student nepalStudent = new Student(3, "Nepal");
+				Student bhutanStudent = new Student(2, "Bhutan");
+
+				List<Student> listOfCountries = new ArrayList<Student>();
+				listOfCountries.add(indiaStudent);
+				listOfCountries.add(chinaStudent);
+				listOfCountries.add(nepalStudent);
+				listOfCountries.add(bhutanStudent);
+				return listOfCountries;
+
+			}
 }
+
